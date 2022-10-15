@@ -32,8 +32,8 @@ body {
 }
 
 .welcome-p {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 50px;
 }
 
@@ -145,7 +145,6 @@ body {
     width: 350px;
     height: auto;
 }
-
 
 .last-box-btn {
     background-color: white;
@@ -261,6 +260,7 @@ ul > li:hover {
     justify-content: end;
     margin-right: 20px;
     margin-bottom: 30px;
+    font-size: smaller;
 }
 
 
@@ -271,3 +271,88 @@ ul > li:hover {
 .attribution a { 
         color: hsl(228, 45%, 44%);
     }
+
+@media only screen and (max-width: 501px) {
+    body {
+        background-image: url(/images/bg-hero-mobile.svg);
+    }
+
+    .welcome-p {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
+    }
+
+    .welcome-text {
+        text-align: center;
+    }
+
+    .welcome-text > button {
+        margin-top: 18px;
+        margin-left: 69px;
+    }
+
+    .mock-up {
+        width: 400px;
+        height: auto;
+        margin: 45px;
+    }
+
+    .white-boxes {
+        display: grid;
+        grid-template: repeat(3, 400px) / 1fr;
+        grid-gap: 170px;
+    }
+
+    .box-1,
+    .box-2,
+    .box-3   {
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    }
+
+    .last-box-btn {
+        width: 460px;
+        height: 100%;
+    }
+
+    .last-box-btn > div {
+        font-family: 'Poppins', sans-serif;
+        color: hsl(192, 100%, 9%);
+        font-size: 22px;
+    }
+
+    .footer-order {
+        display: grid;
+        grid-template: repeat(3, 200px)/ 1fr;
+        margin-left: 10px;
+        padding: 0px;
+    }
+
+    .second-logo > img {
+        margin-left: 10px;
+    }
+
+    .footer-lists {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    
+    .socials {
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        margin-top: 50px;
+    }
+
+    .cc-right {
+        display: flex;
+        justify-content: center;
+    }
+}
